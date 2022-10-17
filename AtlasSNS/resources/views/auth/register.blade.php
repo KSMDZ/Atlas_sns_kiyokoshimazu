@@ -1,4 +1,4 @@
-@extends('layouts.logout')
+；@extends('layouts.logout')
 
 @section('content')
 
