@@ -21,20 +21,41 @@
 </head>
 <body>
     <header>
-        <div id = "head">
         <h1><a href="/top"><img src="images/atlas.png"></a></h1>
-            <div id="">
-                <div id="">
-                    <p>〇〇さん<img src="images/icon1.png"></p>
+
+        <div id="accordion" class="accordion-container">
+        <div class="ac-box"><h4 class="accordion-title js-accordion-title">〇〇さん</h4>
+        <div class="ac-icon"><img src="images/icon1.png"></div></div>
+        <div class="header-right-menu">
+        <ul id="links">
+            <li class="ac-tab"><a href="/top">HOME</a></li>
+            <li class="ac-tab"><a href="/profile">プロフィール編集
+            </a></li>
+            <li class="ac-tab"><a href="/logout">ログアウト</a></li>
+        </ul>
+        </div>
+
+    </header>
+
+        <!-- <div id = "head">
                 <div>
+                <button type="button" class="menu-btn">
+                    <span class="inn"></span>
+                </button>
+                <nav class="menu">
                 <ul>
-                    <li><a href="/top">ホーム</a></li>
+                    <li><a href="/top">HOME</a></li>
                     <li><a href="/profile">プロフィール</a></li>
                     <li><a href="/logout">ログアウト</a></li>
                 </ul>
+                </nav>
             </div>
-        </div>
-    </header>
+        </div> -->
+
+
+
+
+
     <div id="row">
         <div id="container">
             @yield('content')
@@ -53,12 +74,13 @@
                 </div>
                 <p class="btn"><a href="/followerList">フォロワーリスト</a></p>
             </div>
-            <p class="btn"><a href="">ユーザー検索</a></p>
+            <p class="btn"><a href="/search">ユーザー検索</a></p>
         </div>
     </div>
     <footer>
     </footer>
-    <script src="JavaScriptファイルのURL"></script>
-    <script src="JavaScriptファイルのURL"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="{{ asset('/js/app.js') }}"></script>
+    <script src="{{ asset('/js/script.js') }}"></script>
 </body>
 </html>
